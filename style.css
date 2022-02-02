@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.button {
+  padding: 0px;
+  border: none;
+  margin: auto;
+  margin-top: 50px;
+  background: transparent;
+  position: relative;
+}
+.button::after {
+  content: "👈";
+  font-size: 50px;
+  position: absolute;
+  bottom: 0%;
+  left: 110%;
+  animation: point 0.5s ease-in-out infinite alternate-reverse;
+}
+@keyframes point {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+div {
+  margin: auto;
+  display: flex;
+}
+body {
+  background-image: url("image.jpg");
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: 100% 100%;
+  min-height: 86vh;
+}
+h1 {
+  font-size: 70px;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-top: 100px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.quotes {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  /* letter-spacing: 1px; */
+  text-align: center;
+  color: #ffffff;
+  margin: 10px auto;
+}
+.PaymentButton-contents {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+body::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  z-index: -99;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(1px);
+  left: 0;
+  background: rgba(0, 0, 0, 0.733);
+}
+.headingText {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #ffffff;
+  /* text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.973); */
+}
+.salutation {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
